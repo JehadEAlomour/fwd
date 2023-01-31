@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Fwd  Assignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="orders">الطلبات</string>
+    <string name="search_by_name">البحث عن طريق الاسم</string>
+    <string name="timeOrder">وقت الطلب: </string>
+    <string name="time_Accept">وقت الرد:</string>
+    <string name="space">________________________________</string>
+    <string name="ShowInfo">اظهار معلومات الطلب</string>
+    <string name="AcceptOrder">الموافقة على الطلب</string>
+    <string name="RefusalOreder">رفض طلب العميل</string>
+    <string name="PostponementOreder">تأجيل طلب العميل</string>
+    <string name="outTime">خارج وقت الدوام الرسمي</string>
+</resources>

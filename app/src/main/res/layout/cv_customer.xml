@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.fwdassignment.app.CustomerModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/iv_customer"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/avatar_shape"
+                android:src="@{model.imag}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@{model.name}"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@id/iv_customer"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Jehad Alomour"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_timeOrder1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/timeOrder"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@id/tv_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_timeOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle=""
+                app:layout_constraintRight_toLeftOf="@id/tv_timeOrder1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="0795673381" />
+
+            <TextView
+                android:id="@+id/tv_phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:text="@{model.numberPhone}"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintRight_toLeftOf="@id/iv_customer"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                tools:text="0795673381"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_timeAccept1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:text="@string/time_Accept"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@id/tv_phoneNumber"
+                app:layout_constraintTop_toBottomOf="@id/tv_timeOrder" />
+
+            <TextView
+                android:id="@+id/tv_timeAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@{model.timeAccept}"
+                android:textColor="@color/gray"
+                app:layout_constraintRight_toLeftOf="@id/tv_timeOrder1"
+                app:layout_constraintTop_toBottomOf="@id/tv_timeOrder"
+                tools:text="10:00 AM"
+
+                />
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
